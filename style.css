@@ -1,5 +1,6 @@
 :root {
   --white: rgb(255, 255, 255);
+  --seaSalt: rgb(250, 250, 250);
   --davysGray: rgb(76, 78, 97);
   --dimGray: rgb(105, 112, 119);
   --robinEggBlue: rgb(69, 211, 211);
@@ -7,7 +8,7 @@
   --orange: rgb(252, 175, 74);
   --cornflowerBlue: rgb(84, 158, 242);
   --gridMinWidth: 19.4375rem; /*311px*/
-  --gridMaxWidth: 24rem; /*384px*/
+  --gridMaxWidth: 22rem; /*384px*/
 }
 
 * {
@@ -19,15 +20,17 @@
 body {
   font-family: "Poppins", serif;
   font-size: 0.9375rem; /*15px*/
+  background-color: var(--seaSalt);
   color: var(--davysGray);
 }
 
 .container {
-  max-width: min(100%, 80rem);
+  max-width: min(100%, 74rem);
   min-height: 100vh; /*Fallback for svh*/
   min-height: 100svh;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
 }
@@ -71,7 +74,7 @@ h1, h2 {
 }
 
 h3 {
-  font-size: 1.4375rem; /*23px*/
+  font-size: 1.25rem; /*20px*/
   font-weight: 600;
 }
 
@@ -99,6 +102,7 @@ article div::after {
 
 article div p {
   color: var(--dimGray);
+  font-size: 0.8125rem; /*13px*/
 }
 
 img {
@@ -132,6 +136,8 @@ footer {
   text-align: center;
   margin: 0.6875rem 1rem 0; /*11px*/
   text-wrap: pretty;
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -144,7 +150,7 @@ a:hover {
   text-decoration: underline;
 }
 
-@media (width < 80rem) {
+@media (width < 74rem) {
   article div:first-of-type {
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -164,7 +170,7 @@ a:hover {
   }
 }
 
-@media (width < 54rem) {
+@media (width < 50rem) {
   article div:nth-of-type(2), article div:nth-of-type(3) {
     grid-column: unset;
   }
@@ -178,14 +184,6 @@ a:hover {
 @media (width < 32rem) {
   h1, h2 {
     font-size: 1.5rem; /*24px*/
-  }
-
-  h3 {
-    font-size: 1.25rem; /*20px*/
-  }
-
-  article div p {
-    font-size: 0.8125rem; /*13px*/
   }
   
   section {

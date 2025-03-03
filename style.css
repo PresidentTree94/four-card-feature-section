@@ -35,7 +35,7 @@ body {
 }
 
 main {
-  width: 100%;
+  min-width: 23.4375rem; /*375px*/
   padding: 2rem; /*32px*/
   animation: fadeUp 1s ease;
 }
@@ -53,7 +53,6 @@ section {
 
 header {
   max-width: 32rem; /*512px*/
-  min-width: var(--gridMinWidth);
   text-align: center;
   margin: 0 auto;
 }

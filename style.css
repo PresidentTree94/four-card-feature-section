@@ -8,7 +8,7 @@
   --orange: rgb(252, 175, 74);
   --cornflowerBlue: rgb(84, 158, 242);
   --gridMinWidth: 19.4375rem; /*311px*/
-  --gridMaxWidth: 24rem; /*384px*/
+  --gridMaxWidth: 22rem; /*352px*/
 }
 
 * {
@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  max-width: min(100%, 80rem);
+  max-width: min(100%, 74rem);
   min-height: 100vh; /*Fallback for svh*/
   min-height: 100svh;
   margin: 0 auto;
@@ -147,7 +147,7 @@ a:hover {
   text-decoration: underline;
 }
 
-@media (width < 80rem) {
+@media (width < 74rem) {
   article div:first-of-type {
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -167,7 +167,7 @@ a:hover {
   }
 }
 
-@media (width < 54rem) {
+@media (width < 50rem) {
   article div:nth-of-type(2), article div:nth-of-type(3) {
     grid-column: unset;
   }

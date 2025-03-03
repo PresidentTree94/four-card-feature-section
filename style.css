@@ -1,6 +1,5 @@
 :root {
   --white: rgb(255, 255, 255);
-  --seaSalt: rgb(250, 250, 250);
   --davysGray: rgb(76, 78, 97);
   --dimGray: rgb(105, 112, 119);
   --robinEggBlue: rgb(69, 211, 211);
@@ -8,7 +7,7 @@
   --orange: rgb(252, 175, 74);
   --cornflowerBlue: rgb(84, 158, 242);
   --gridMinWidth: 19.4375rem; /*311px*/
-  --gridMaxWidth: 22rem; /*352px*/
+  --gridMaxWidth: 24rem; /*384px*/
 }
 
 * {
@@ -20,12 +19,11 @@
 body {
   font-family: "Poppins", serif;
   font-size: 0.9375rem; /*15px*/
-  background-color: var(--seaSalt);
   color: var(--davysGray);
 }
 
 .container {
-  max-width: min(100%, 74rem);
+  max-width: min(100%, 80rem);
   min-height: 100vh; /*Fallback for svh*/
   min-height: 100svh;
   margin: 0 auto;
@@ -35,6 +33,7 @@ body {
 }
 
 main {
+  width: 100%;
   padding: 2rem; /*32px*/
   animation: fadeUp 1s ease;
 }
@@ -72,7 +71,7 @@ h1, h2 {
 }
 
 h3 {
-  font-size: 1.25rem; /*20px*/
+  font-size: 1.4375rem; /*23px*/
   font-weight: 600;
 }
 
@@ -87,7 +86,6 @@ article {
 article div {
   padding: 2rem; /*32px*/
   border-radius: 0.625rem; /*10px*/
-  font-size: 0.8125rem; /*13px*/
   display: grid;
   box-shadow: 0 6px 20px rgba(84, 158, 242, 0.2);
   max-width: var(--gridMaxWidth);
@@ -134,7 +132,6 @@ footer {
   text-align: center;
   margin: 0.6875rem 1rem 0; /*11px*/
   text-wrap: pretty;
-  min-width: var(--gridMinWidth);
 }
 
 a {
@@ -147,7 +144,7 @@ a:hover {
   text-decoration: underline;
 }
 
-@media (width < 74rem) {
+@media (width < 80rem) {
   article div:first-of-type {
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -167,7 +164,7 @@ a:hover {
   }
 }
 
-@media (width < 50rem) {
+@media (width < 54rem) {
   article div:nth-of-type(2), article div:nth-of-type(3) {
     grid-column: unset;
   }
@@ -181,6 +178,14 @@ a:hover {
 @media (width < 32rem) {
   h1, h2 {
     font-size: 1.5rem; /*24px*/
+  }
+
+  h3 {
+    font-size: 1.25rem; /*20px*/
+  }
+
+  article div p {
+    font-size: 0.8125rem; /*13px*/
   }
   
   section {

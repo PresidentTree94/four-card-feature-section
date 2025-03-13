@@ -37,7 +37,7 @@ body {
 main {
   padding: 2rem; /*32px*/
   opacity: 0;
-  animation: fadeUp 1s ease;
+  animation: fadeUp 1s ease forwards;
 }
 
 @keyframes fadeUp {

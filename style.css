@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  max-width: min(100%, 74rem);
+  max-width: min(100%, 74rem); /*1184px*/
   min-height: 100vh; /*Fallback for svh*/
   min-height: 100svh;
   margin: 0 auto;

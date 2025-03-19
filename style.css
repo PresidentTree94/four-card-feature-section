@@ -10,6 +10,13 @@
   --gridMaxWidth: 22rem; /*384px*/
 }
 
+.altMode {
+  --white: rgb(0, 0, 0);
+  --seaSalt: rgb(5, 5, 5);
+  --davysGray: rgb(155, 162, 169);
+  --dimGray: rgb(126, 128, 147);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +39,14 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+#toggle {
+  background-color: var(--davysGray);
+}
+
+svg {
+  fill: var(--indianRed);
 }
 
 main {
@@ -82,6 +97,7 @@ article div {
   padding: 2rem; /*32px*/
   border-radius: 0.625rem; /*10px*/
   display: grid;
+  background-color: var(--white);
   box-shadow: 0 6px 20px rgba(84, 158, 242, 0.2);
   max-width: var(--gridMaxWidth);
 }
